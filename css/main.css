@@ -1,33 +1,29 @@
 :root {
-    --primary: #1E3A5F;       /* Academic Navy */
-    --secondary: #4A6FA5;     /* Slate Blue */
-    --accent: #2A9D8F;        /* Teal */
-    --background: #F8F9FA;    /* Page Background */
-    --surface: #FFFFFF;       /* Cards / Content Areas */
-    --text-primary: #2B2D42;  /* Main Text */
-    --text-secondary: #5C677D;
-    --border: #D9E2EC;
+    --primary: #0F3D7A;        
+    --secondary: #2563EB;      
+    --accent: #38BDF8;         
+    --background: #EAF2FF;     
+    --surface: #FFFFFF;        
+    --surface-soft: #F6FAFF;   
+    --text-primary: #102A43;   
+    --text-secondary: #486581; 
+    --border: #C9DDF5;
 }
 
 /* Global rules */
 
 html {
-
-    /* ===== UX/UI REDESIGN CHANGE #2 ===== */
-    background-color: var(--background);
-
+    background: linear-gradient(135deg, #EAF2FF, #F8FBFF);
     font-size: 0.95em;
 }
 
 body {
 
-    /* ===== UX/UI REDESIGN CHANGE #3 ===== */
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
     line-height: 1.6;
 
-    /* Updated background */
-    background-color: var(--background);
+    background: transparent;
 
     /* Updated text hierarchy */
     color: var(--text-primary);
@@ -45,28 +41,23 @@ body {
 h1 {
     font-weight: normal;
     margin: auto;
-
-    /* ===== UX/UI REDESIGN CHANGE ===== */
-    background: var(--surface);
-    color: var(--primary);
-
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white;
     line-height: 2.5em;
+    border-radius: 12px 12px 0 0;
 }
 
 main.wrapper {
-
-    /* ===== UX/UI REDESIGN CHANGE ===== */
     background-color: var(--surface);
-
-    border-radius: 12px;
-
+    border-radius: 0 0 12px 12px;
     overflow: auto;
+    box-shadow: 0 10px 30px rgba(15, 61, 122, 0.15);
 }
 
 p {
     margin: 1em;
 
-    /* ===== UX/UI REDESIGN CHANGE ===== */
+    
     color: var(--text-secondary);
 }
 
@@ -79,13 +70,13 @@ h3 {
 
     line-height: 1em;
 
-    /* ===== UX/UI REDESIGN CHANGE ===== */
+   
     color: var(--primary);
 }
 
 a {
 
-    /* ===== UX/UI REDESIGN CHANGE ===== */
+
     color: var(--accent);
 
     text-decoration: none;
@@ -93,9 +84,8 @@ a {
 
 a:hover {
 
-    /* ===== UX/UI REDESIGN CHANGE ===== */
-    color: white;
-    background-color: var(--primary);
+    color: var(--primary);
+    background-color: #DCEBFF;
 
     text-decoration: none;
 }
@@ -182,7 +172,7 @@ footer {
     flex-direction: row; /* Default layout: Image left, text right */
     align-items: center;
     gap: 30px;
-    background: var(--surface_);
+    background: var(--surface-soft);
     border: 1px solid var(--border);
     border-radius: 12px; /* Smooth rounded corners */
     padding: 24px;
@@ -247,15 +237,16 @@ footer {
   }
   
   .demo-btn {
-    background-color: var(--primary);
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
     color: white;
 }
 
 .demo-btn:hover {
-    background-color: var(--secondary);
+    background: var(--primary);
+    color: white;
 }
 
-/* ===== UX/UI REDESIGN CHANGE ===== */
+
 /* Secondary Action */
 
 .repo-btn {
@@ -265,8 +256,8 @@ footer {
 }
 
 .repo-btn:hover {
-    background-color: var(--secondary);
-    color: white;
+    background-color: #DCEBFF;
+    color: var(--primary);
 }
   
   /* Responsive Overrides: If screen is small, stack everything vertically */
